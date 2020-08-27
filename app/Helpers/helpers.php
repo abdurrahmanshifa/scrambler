@@ -9,7 +9,6 @@ function randomWord($teks){
 }
 
 function indonesian_date ($timestamp = '', $date_format = 'l, j F Y | H:i', $suffix = '') {
-
     if($timestamp == '0000-00-00 00:00:00' || $timestamp == null)
     {
          return '-';

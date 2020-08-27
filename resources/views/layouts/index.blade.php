@@ -66,7 +66,7 @@
                                     <a href="{{ route('register') }}" class="btn">Register</a>
                                 @endif
                             @else
-                                <a id="navbarDropdown" class="mr-40" href="{{ route('home') }}">
+                                <a id="navbarDropdown" class="mr-40" href="{{ url('/') }}">
                                     {{ Auth::user()->name }}
                                 </a>
                                 <a id="navbarDropdown" class="mr-40" href="{{ route('home') }}">

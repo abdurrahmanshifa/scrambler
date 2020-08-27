@@ -53,6 +53,11 @@
                         <li class="nav-item">
                             <a class="nav-link" href="{{ url('/') }}">{{ __('Home') }}</a>
                         </li>
+                        @if (Gate::allows('isAdmin'))
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{ route('admin.nouns') }}">{{ __('Nouns') }}</a>
+                            </li>
+                        @endif
                         <li class="nav-item">
                             <a class="nav-link" href="{{ route('home') }}">{{ __('Score') }}</a>
                         </li>

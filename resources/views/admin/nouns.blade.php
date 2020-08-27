@@ -5,17 +5,16 @@
     <div class="row justify-content-center">
         <div class="col-md-12">
             <div class="card">
-                <div class="card-header">{{ __('Score') }}</div>
+                <div class="card-header">{{ __('Nouns') }}</div>
                 <div class="card-body">
-                    <a class="btn btn-primary" href="{{ route('play',['id' => '5']) }}" style="margin-bottom: 20px;">
-                        {{ __('Play') }}
+                    <a class="btn btn-primary" href="{{ route('admin.get-nouns') }}" style="margin-bottom: 20px;">
+                        {{ __('Get Nouns') }}
                     </a>
                     <table class="table table-bordered" id="score-table">
                         <thead>
                             <tr>
-                                <th>Name</th>
-                                <th>Score</th>
-                                <th>Level</th>
+                                <th>Text</th>
+                                <th>Jumlah Kata</th>
                                 <th>Date</th>
                             </tr>
                         </thead>
@@ -34,11 +33,10 @@
     var table = $('#score-table').DataTable({
         processing: true,
         serverSide: true,
-        ajax: '{{route("admin.dashboard")}}',
+        ajax: '{{route("admin.nouns")}}',
         columns: [
-            { data: 'name', name: 'name' },
-            { data: 'score', name: 'score' },
-            { data: 'level', name: 'level' },
+            { data: 'text', name: 'text' },
+            { data: 'count', name: 'count' },
             { data: 'date', name: 'date' }
         ],
     });

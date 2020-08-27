@@ -23,6 +23,8 @@ Route::get('/home', 'HomeController@index')->name('home');
 
 Route::prefix('admin/')->name('admin.')->group(function () {
     Route::get('/', 'AdminController@index')->name('dashboard');
+    Route::get('/nouns', 'AdminController@nouns')->name('nouns');
+    Route::get('/get-nouns', 'AdminController@get_nouns')->name('get-nouns');
 });
 
 Route::get('/play', 'HomeController@play')->name('play');

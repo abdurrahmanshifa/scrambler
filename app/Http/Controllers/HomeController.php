@@ -39,8 +39,9 @@ class HomeController extends Controller
         if(request()->ajax()){
             $user = Auth::user();
 
-            $score = DB::table('scores')->join('users', 'users.id', '=', 'scores.user_id')
+            $score = DB::table('scores')->select('users.name','scores.*')->join('users', 'users.id', '=', 'scores.user_id')
             ->where('users.id',$user->id)
+            ->orderByDesc('scores.created_at')
             ->get();
             return Datatables::of($score)
             ->editColumn('name', function($score) {
@@ -63,24 +64,6 @@ class HomeController extends Controller
 
     public function play($id=5)
     {
-        // $client = new Client(); //GuzzleHttp\Client
-        // $result = $client->request('GET','https://www.wordgenerator.net/application/p.php?id=nouns&type=1');
-        // $nouns =  $result->getBody();
-        $nouns = 'Effect,Act,Growth,Reward,Damage,Mass,Self,Secretary,Development,Example,Balance,Name,Rain,Blood,Ray,Committee,Mountain,Offer,Base,Flower,Crack,Increase,Weight,Summer,River,Tin,Love,Relation,Nation,Shake,Invention,Room,Hope,Driving,Servant,Death,Size,Meeting,Oil,Letter,Scale,Substance,Produce,Use,Move,Month,Respect,Birth,Price,Play,';
-        $noun = array_filter(explode(',',$nouns),'strlen');
-        foreach($noun as $value){
-            $kalimat = new Noun();
-
-            $cek = Noun::where('text', $value)->count();
-            if($cek == 0)
-            {
-                $kalimat->text = strtolower($value);
-                $kalimat->count = strlen($value);
-                $kalimat->created_at = now();
-                $kalimat->updated_at = null;
-                $kalimat->save();
-            }
-        }
         $data = Noun::inRandomOrder()->where('count','=',$id)->limit(10)->get();
         $this->data = array(
             'id'    => $id,

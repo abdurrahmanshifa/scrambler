@@ -42,12 +42,6 @@
             { data: 'level', name: 'level' },
             { data: 'date', name: 'date' }
         ],
-        "columnDefs":[
-          {
-            targets:[1],
-            orderable: false,
-          }
-        ],
     });
 
     $('.searchtype').on('change', function() {

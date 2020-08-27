@@ -65,70 +65,74 @@
                     </div>
                 </div>
             </div>
-            <div class="row">
-                <div class="col-xl-4 col-lg-4 col-md-6">
+            <div class="row justify-content-center">
+                <div class="col-xl-4 col-lg-4 col-md-6" style="margin-bottom:20px;">
                     <div class="single-features mb-40">
                         <div class="features-icon">
                             <img src="{{ asset('img/gallery/right-icon.png') }}" alt="">
                         </div>
                         <div class="features-caption">
-                            <h3>Instant Activation</h3>
+                            <h3>5 Letter Words</h3>
                             <p>We operate one of the most advanced 100 Gbit networks in the world, complete with Anycast support and extensive DDoS protection.</p>
+                            <a href="{{ route('play',['id' => '5']) }}" class="btn" style="padding: 10px 30px;">
+                                <i class="fas fa-play-circle"></i> Play
+                            </a>
                         </div>
                     </div>
                 </div>
-                <div class="col-xl-4 col-lg-4 col-md-6">
+                <div class="col-xl-4 col-lg-4 col-md-6" style="margin-bottom:20px;">
                     <div class="single-features mb-40">
                         <div class="features-icon">
                             <img src="{{ asset('img/gallery/right-icon.png') }}" alt="">
                         </div>
                         <div class="features-caption">
-                            <h3>Fully Redundant</h3>
+                            <h3>6 Letter Words</h3>
                             <p>We operate one of the most advanced 100 Gbit networks in the world, complete with Anycast support and extensive DDoS protection.</p>
+                            <a href="{{ route('play',['id' => '6']) }}" class="btn" style="padding: 10px 30px;">
+                                <i class="fas fa-play-circle"></i> Play
+                            </a>
                         </div>
                     </div>
                 </div>
-                <div class="col-xl-4 col-lg-4 col-md-6">
+                <div class="col-xl-4 col-lg-4 col-md-6" style="margin-bottom:20px;">
                     <div class="single-features mb-40">
                         <div class="features-icon">
                             <img src="{{ asset('img/gallery/right-icon.png') }}" alt="">
                         </div>
                         <div class="features-caption">
-                            <h3>Powerful Automation</h3>
+                            <h3>7 Letter Words</h3>
                             <p>We operate one of the most advanced 100 Gbit networks in the world, complete with Anycast support and extensive DDoS protection.</p>
+                            <a href="{{ route('play',['id' => '7']) }}" class="btn" style="padding: 10px 30px;">
+                                <i class="fas fa-play-circle"></i> Play
+                            </a>
                         </div>
                     </div>
                 </div>
-                <div class="col-xl-4 col-lg-4 col-md-6">
+                <div class="col-xl-4 col-lg-4 col-md-6" style="margin-bottom:20px;">
                     <div class="single-features mb-40">
                         <div class="features-icon">
                             <img src="{{ asset('img/gallery/right-icon.png') }}" alt="">
                         </div>
                         <div class="features-caption">
-                            <h3>Powerful Automation</h3>
+                            <h3>8 Letter Words</h3>
                             <p>We operate one of the most advanced 100 Gbit networks in the world, complete with Anycast support and extensive DDoS protection.</p>
+                            <a href="{{ route('play',['id' => '8']) }}" class="btn" style="padding: 10px 30px;">
+                                <i class="fas fa-play-circle"></i> Play
+                            </a>
                         </div>
                     </div>
                 </div>
-                <div class="col-xl-4 col-lg-4 col-md-6">
+                <div class="col-xl-4 col-lg-4 col-md-6" style="margin-bottom:20px;">
                     <div class="single-features mb-40">
                         <div class="features-icon">
                             <img src="{{ asset('img/gallery/right-icon.png') }}" alt="">
                         </div>
                         <div class="features-caption">
-                            <h3>High Performance</h3>
+                            <h3>9 Letter Words</h3>
                             <p>We operate one of the most advanced 100 Gbit networks in the world, complete with Anycast support and extensive DDoS protection.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-xl-4 col-lg-4 col-md-6">
-                    <div class="single-features mb-40">
-                        <div class="features-icon">
-                            <img src="{{ asset('img/gallery/right-icon.png') }}" alt="">
-                        </div>
-                        <div class="features-caption">
-                            <h3>Dedicated Support</h3>
-                            <p>We operate one of the most advanced 100 Gbit networks in the world, complete with Anycast support and extensive DDoS protection.</p>
+                            <a href="{{ route('play',['id' => '9']) }}" class="btn" style="padding: 10px 30px;">
+                                <i class="fas fa-play-circle"></i> Play
+                            </a>
                         </div>
                     </div>
                 </div>

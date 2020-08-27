@@ -27,7 +27,32 @@
     </div>
     <!--Hero Area End-->
     <!--? Pricing Card Start -->
-    <section class="pricing-card-area pricing-card-area2 section-padding40">
+    <section class="pricing-card-area pricing-card-area2">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
+                    <div class="single-card text-center mb-30">
+                        <a href="{{ route('play',['id' => '5']) }}" class="btn" style="padding: 10px 30px;">
+                            <i class="fas fa-play-circle"></i> Play 5 Letter
+                        </a>
+                        <a href="{{ route('play',['id' => '6']) }}" class="btn" style="padding: 10px 30px;">
+                            <i class="fas fa-play-circle"></i> Play 6 Letter
+                        </a>
+                        <a href="{{ route('play',['id' => '7']) }}" class="btn" style="padding: 10px 30px;">
+                            <i class="fas fa-play-circle"></i> Play 7 Letter
+                        </a>
+                        <a href="{{ route('play',['id' => '8']) }}" class="btn" style="padding: 10px 30px;">
+                            <i class="fas fa-play-circle"></i> Play 8 Letter
+                        </a>
+                        <a href="{{ route('play',['id' => '9']) }}" class="btn" style="padding: 10px 30px;">
+                            <i class="fas fa-play-circle"></i> Play 9 Letter
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="pricing-card-area pricing-card-area2 section-padding40" style="padding-top: 40px;">
         <div class="container">
             <form method="POST" id="form_jawaban" name="form_jawaban">
                 <input type="hidden" name="level" value="{{$data['id']}}">
@@ -86,7 +111,7 @@
 
 
         Swal.fire({
-            text: "Apakah Data ini Ingin Di Simpan?",
+            text: "Apakah Jawaban Anda Sudah Benar?",
             title: "Perhatian",
             icon: 'info',
             showCancelButton: true,
