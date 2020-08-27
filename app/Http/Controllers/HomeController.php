@@ -103,7 +103,7 @@ class HomeController extends Controller
         {
             $data['icon']       = 'error';
             $data['message']    = 'Anda hanya mendapatkan point '.$nilai.' dari 10';
-            $data['title']      = 'Maaf'; 
+            $data['title']      = 'Perhatian'; 
             echo json_encode($data);
         }else{
             $data['icon']       = 'success';
