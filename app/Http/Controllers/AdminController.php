@@ -25,10 +25,12 @@ class AdminController extends Controller
     {
         $this->authorize('isAdmin');
         if(request()->ajax()){
+            
             $score = DB::table('scores')->select('users.name','scores.*')->join('users', 'users.id', '=', 'scores.user_id')
             ->orderByDesc('scores.created_at')
             ->get();
             return Datatables::of($score)
+            ->addIndexColumn()
             ->editColumn('name', function($score) {
                 return $score->name;
             })
@@ -54,6 +56,7 @@ class AdminController extends Controller
             $nouns = DB::table('nouns')->orderBy('count','ASC')
             ->get();
             return Datatables::of($nouns)
+            ->addIndexColumn()
             ->editColumn('text', function($nouns) {
                 return $nouns->text;
             })

@@ -13,6 +13,7 @@
                     <table class="table table-bordered" id="score-table">
                         <thead>
                             <tr>
+                                <th>No</th>
                                 <th>Text</th>
                                 <th>Jumlah Kata</th>
                                 <th>Date</th>
@@ -35,6 +36,7 @@
         serverSide: true,
         ajax: '{{route("admin.nouns")}}',
         columns: [
+            {data: 'DT_RowIndex', name: 'DT_RowIndex'},
             { data: 'text', name: 'text' },
             { data: 'count', name: 'count' },
             { data: 'date', name: 'date' }

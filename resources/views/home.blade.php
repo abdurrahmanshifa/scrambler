@@ -14,6 +14,7 @@
                     <table class="table table-bordered" id="score-table">
                         <thead>
                             <tr>
+                                <th>No</th>
                                 <th>Name</th>
                                 <th>Score</th>
                                 <th>Level</th>
@@ -37,6 +38,7 @@
         serverSide: true,
         ajax: '{{route("home")}}',
         columns: [
+            {data: 'DT_RowIndex', name: 'DT_RowIndex'},
             { data: 'name', name: 'name' },
             { data: 'score', name: 'score' },
             { data: 'level', name: 'level' },

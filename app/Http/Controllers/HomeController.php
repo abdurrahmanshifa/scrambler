@@ -44,6 +44,7 @@ class HomeController extends Controller
             ->orderByDesc('scores.created_at')
             ->get();
             return Datatables::of($score)
+            ->addIndexColumn()
             ->editColumn('name', function($score) {
                 return $score->name;
             })
