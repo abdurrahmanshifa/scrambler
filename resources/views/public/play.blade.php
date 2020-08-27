@@ -116,7 +116,7 @@
             icon: 'info',
             showCancelButton: true,
             confirmButtonColor: "#2196F3",
-            confirmButtonText: "Simpan",
+            confirmButtonText: "Ya",
             cancelButtonText: "Tidak",
             closeOnConfirm: false,
             closeOnCancel: true
